@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-8">
+    <div class="max-w-lg mx-auto">
+      <h1 class="text-2xl font-bold mb-4">Calculadora de Monedas</h1>
+      <h2 class="text-lg font-semibold mb-2">
+        Diámetro de la cuadra por ejemplo: 402.98 m
+      </h2>
+      <form class="mb-4">
+        <label for="diametro" class="block mb-1"
+          >Diámetro de la cuadra (m):</label
+        >
+        <input
+          type="number"
+          id="diametro"
+          name="diametro"
+          step="0.01"
+          required
+          class="border border-gray-300 px-2 py-1 rounded mr-2"
+        />
+        <button
+          type="button"
+          onclick="calcularMonedas()"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded"
+        >
+          Calcular
+        </button>
+      </form>
+      <p id="resultado" class="text-lg font-semibold"></p>
+
+      <h1 class="text-2xl font-bold mt-8">Calculadora de Coca-Cola</h1>
+      <h2 class="text-lg font-semibold mb-2">
+        Dimensiones del cuarto en metros
+      </h2>
+      <p>
+        Segun google una lata de COCA-COLA REGULAR LATA tiene 33 centimetros
+        cubicos .
+      </p>
+      <form class="mb-4">
+        <label for="largo" class="block mb-1">Largo:</label>
+        <input
+          type="number"
+          id="largo"
+          name="largo"
+          step="0.01"
+          required
+          class="border border-gray-300 px-2 py-1 rounded mb-2"
+        />
+        <label for="ancho" class="block mb-1">Ancho:</label>
+        <input
+          type="number"
+          id="ancho"
+          name="ancho"
+          step="0.01"
+          required
+          class="border border-gray-300 px-2 py-1 rounded mb-2"
+        />
+        <label for="altura" class="block mb-1">Altura:</label>
+        <input
+          type="number"
+          id="altura"
+          name="altura"
+          step="0.01"
+          required
+          class="border border-gray-300 px-2 py-1 rounded mb-2"
+        />
+        <button
+          type="button"
+          onclick="calcularCantidadCocaCola()"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded"
+        >
+          Calcular
+        </button>
+      </form>
+      <p id="resultadoCocaCola" class="text-lg font-semibold"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
